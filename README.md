@@ -1,6 +1,6 @@
-<img align="right" width="240" src="./img/mainicon.png">
+<img align="right" width="240" src="./img/minecraft.webp">
 
-# Soot Notes 
+# Drav Notes 
 
 A Minecraft Bungee Plugin that adds note taking to Minecraft.
 
