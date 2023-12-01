@@ -1,4 +1,4 @@
-package wtf.drav.sootnotes;
+package wtf.drav.dravnotes;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -33,10 +33,10 @@ public class Main extends Plugin {
 	
 	// Default messages
 	ComponentBuilder pluginHelp = new ComponentBuilder("------- ").color(ChatColor.DARK_GRAY)
-			.append("Soot").color(ChatColor.GOLD).bold(true)
+			.append("Drav").color(ChatColor.GOLD).bold(true)
 			.append("Notes").color(ChatColor.RED)
 			.append(" -------\n").color(ChatColor.DARK_GRAY).bold(false)
-			.append("Welcome to SootNotes! SootNotes has 3 main components: "
+			.append("Welcome to DravNotes! DravNotes has 3 main components: "
 					+ "\n- Note, which adds notes to a player "
 					+ "\n- Xray, which marks a player as possible xray "
 					+ "\n- Siblings, adds players to a siblings list"
@@ -45,7 +45,7 @@ public class Main extends Plugin {
 			.append("\n-------------------------").color(ChatColor.DARK_GRAY);
 	
 	ComponentBuilder noteHelp = new ComponentBuilder("------- ").color(ChatColor.DARK_GRAY)
-			.append("Soot").color(ChatColor.GOLD).bold(true)
+			.append("Drav").color(ChatColor.GOLD).bold(true)
 			.append("Notes").color(ChatColor.RED)
 			.append(" -------\n").color(ChatColor.DARK_GRAY).bold(false)
 			.append("Help for the Note component: "
@@ -58,7 +58,7 @@ public class Main extends Plugin {
 			.append("\n-------------------------").color(ChatColor.DARK_GRAY);
 	
 	ComponentBuilder xrayHelp = new ComponentBuilder("------- ").color(ChatColor.DARK_GRAY)
-			.append("Soot").color(ChatColor.GOLD).bold(true)
+			.append("Drav").color(ChatColor.GOLD).bold(true)
 			.append("Notes").color(ChatColor.RED)
 			.append(" -------\n").color(ChatColor.DARK_GRAY).bold(false)
 			.append("Help for the Xray component: ").color(ChatColor.WHITE)
@@ -71,7 +71,7 @@ public class Main extends Plugin {
 			.append("\n-------------------------").color(ChatColor.DARK_GRAY);
 	
 	ComponentBuilder siblingHelp = new ComponentBuilder("------- ").color(ChatColor.DARK_GRAY)
-			.append("Soot").color(ChatColor.GOLD).bold(true)
+			.append("Drav").color(ChatColor.GOLD).bold(true)
 			.append("Notes").color(ChatColor.RED)
 			.append(" -------\n").color(ChatColor.DARK_GRAY).bold(false)
 			.append("Help for the Siblings component: ").color(ChatColor.WHITE)
@@ -101,7 +101,7 @@ public class Main extends Plugin {
 		@Override
 		public void execute(final CommandSender sender, final String[] args) {
 			// check if player sending command
-			if ((sender instanceof ProxiedPlayer && sender.hasPermission("sootnotes.use"))) {
+			if ((sender instanceof ProxiedPlayer && sender.hasPermission("Dravnotes.use"))) {
 				// run async task to not block up main thread
 				getProxy().getScheduler().runAsync(plugin, new Runnable() {
 					public void run() {
@@ -180,7 +180,7 @@ public class Main extends Plugin {
 				            			playerConfig.set("notes", allNotes);
 				            			  
 				            			ComponentBuilder msg = new ComponentBuilder("------- ").color(ChatColor.DARK_GRAY)
-				            					.append("Soot").color(ChatColor.GOLD).bold(true)
+				            					.append("Drav").color(ChatColor.GOLD).bold(true)
 				            					.append("Notes").color(ChatColor.RED)
 				            					.append(" -------\n").color(ChatColor.DARK_GRAY).bold(false)
 				            					.append("Player: " + args[2] + "\nAdded Note: " + note).color(ChatColor.WHITE)
@@ -199,7 +199,7 @@ public class Main extends Plugin {
 				            				return;
 				            			}
 				            			ComponentBuilder msg = new ComponentBuilder("------- ").color(ChatColor.DARK_GRAY)
-				            					.append("Soot").color(ChatColor.GOLD).bold(true)
+				            					.append("Drav").color(ChatColor.GOLD).bold(true)
 				            					.append("Notes").color(ChatColor.RED)
 				            					.append(" -------\n").color(ChatColor.DARK_GRAY).bold(false);
 				            			
@@ -222,7 +222,7 @@ public class Main extends Plugin {
 					            	case "get": {
 				            			List<String> notes = playerConfig.getStringList("notes");
 				            			ComponentBuilder msg = new ComponentBuilder("------- ").color(ChatColor.DARK_GRAY)
-				            					.append("Soot").color(ChatColor.GOLD).bold(true)
+				            					.append("Drav").color(ChatColor.GOLD).bold(true)
 				            					.append("Notes").color(ChatColor.RED)
 				            					.append(" -------\n").color(ChatColor.DARK_GRAY).bold(false)
 				            					.append("Notes for: " + args[2] + "\n").color(ChatColor.WHITE);
@@ -240,7 +240,7 @@ public class Main extends Plugin {
 				            	switch(args[1].toLowerCase()) {
 					            	case "add": {
 				            			ComponentBuilder msg = new ComponentBuilder("------- ").color(ChatColor.DARK_GRAY)
-				            					.append("Soot").color(ChatColor.GOLD).bold(true)
+				            					.append("Drav").color(ChatColor.GOLD).bold(true)
 				            					.append("Notes").color(ChatColor.RED)
 				            					.append(" -------\n").color(ChatColor.DARK_GRAY).bold(false);
 				            			
@@ -259,7 +259,7 @@ public class Main extends Plugin {
 					            	}
 					            	case "remove": {
 				            			ComponentBuilder msg = new ComponentBuilder("------- ").color(ChatColor.DARK_GRAY)
-				            					.append("Soot").color(ChatColor.GOLD).bold(true)
+				            					.append("Drav").color(ChatColor.GOLD).bold(true)
 				            					.append("Notes").color(ChatColor.RED)
 				            					.append(" -------\n").color(ChatColor.DARK_GRAY).bold(false);
 				            			
@@ -278,7 +278,7 @@ public class Main extends Plugin {
 					            	}
 					            	case "get": {
 					            		ComponentBuilder msg = new ComponentBuilder("------- ").color(ChatColor.DARK_GRAY)
-				            					.append("Soot").color(ChatColor.GOLD).bold(true)
+				            					.append("Drav").color(ChatColor.GOLD).bold(true)
 				            					.append("Notes").color(ChatColor.RED)
 				            					.append(" -------\n").color(ChatColor.DARK_GRAY).bold(false);
 				            			
@@ -291,7 +291,7 @@ public class Main extends Plugin {
 					            	}
 					            	case "list": {
 					            		ComponentBuilder msg = new ComponentBuilder("------- ").color(ChatColor.DARK_GRAY)
-				            					.append("Soot").color(ChatColor.GOLD).bold(true)
+				            					.append("Drav").color(ChatColor.GOLD).bold(true)
 				            					.append("Notes").color(ChatColor.RED)
 				            					.append(" -------\n").color(ChatColor.DARK_GRAY).bold(false)
 				            					.append("Xray List:").color(ChatColor.WHITE);
@@ -326,7 +326,7 @@ public class Main extends Plugin {
 				            			}
 				            			String log = " changed siblings list of: ";
 				            			ComponentBuilder msg = new ComponentBuilder("------- ").color(ChatColor.DARK_GRAY)
-				            					.append("Soot").color(ChatColor.GOLD).bold(true)
+				            					.append("Drav").color(ChatColor.GOLD).bold(true)
 				            					.append("Notes").color(ChatColor.RED)
 				            					.append(" -------\n").color(ChatColor.DARK_GRAY).bold(false)
 				            					.append("New Siblings List: ").color(ChatColor.WHITE);
@@ -354,7 +354,7 @@ public class Main extends Plugin {
 			            				}
 				            			
 				            			ComponentBuilder msg = new ComponentBuilder("------- ").color(ChatColor.DARK_GRAY)
-				            					.append("Soot").color(ChatColor.GOLD).bold(true)
+				            					.append("Drav").color(ChatColor.GOLD).bold(true)
 				            					.append("Notes").color(ChatColor.RED)
 				            					.append(" -------\n").color(ChatColor.DARK_GRAY).bold(false);
 				            			if(uuids.size() == 0) {
@@ -391,7 +391,7 @@ public class Main extends Plugin {
 					            		List<String> uuids = new ArrayList<String>();
 				            			
 				            			ComponentBuilder msg = new ComponentBuilder("------- ").color(ChatColor.DARK_GRAY)
-				            					.append("Soot").color(ChatColor.GOLD).bold(true)
+				            					.append("Drav").color(ChatColor.GOLD).bold(true)
 				            					.append("Notes").color(ChatColor.RED)
 				            					.append(" -------\n").color(ChatColor.DARK_GRAY).bold(false)
 				            					.append("Siblings for: " + args[2]).color(ChatColor.WHITE);
@@ -419,7 +419,7 @@ public class Main extends Plugin {
 		
 		@Override
 		public Iterable<String> onTabComplete(CommandSender sender, String[] args) {
-			if(sender.hasPermission("sootnotes.use")) {
+			if(sender.hasPermission("Dravnotes.use")) {
 				Set<String> match = new HashSet<String>();
 		        if (args.length == 1) {
 		        	match.addAll(Arrays.asList("note","xray","siblings"));
